@@ -11,6 +11,7 @@ import ReportsPage from './pages/ReportsPage';
 import LandingPage from './pages/LandingPage';
 import InsightsPage from './pages/InsightsPage';
 import EmojiFeedback from './pages/EmojiFeedback';
+import EmployeeDashboard from './pages/EmployeeDashboard';
 
 function App() {
   return (
@@ -27,6 +28,8 @@ function App() {
             <Route path="/reports" element={<ReportsPage />} />
             <Route path='/insights' element={<InsightsPage />} />
             <Route path="/emoji-feedback" element={<EmojiFeedback />} />
+            <Route path="/employees" element={<EmployeeDashboard />} />
+
           </Routes>
         </div>
       </Router>

@@ -3,7 +3,7 @@ import { motion, useScroll, useTransform, useSpring, useAnimation } from 'framer
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ArrowRight, BarChart2, Users, Calendar, Sparkles, ChevronDown } from "lucide-react";
-
+import { Link } from "react-router-dom";
 const ParallaxText = ({ children, baseVelocity = 100 }) => {
   const [loopNum, setLoopNum] = useState(0);
   const controls = useAnimation();
@@ -199,6 +199,7 @@ const LandingPage = () => {
           transition={{ delay: 1, type: "spring" }}
           className="flex space-x-4"
         >
+          <Link to="/dashboard">
           <Button
             size="lg"
             className="bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 text-white px-8 py-6 text-xl rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:shadow-indigo-500/25"
@@ -206,6 +207,7 @@ const LandingPage = () => {
             Get Started
             <ArrowRight className="ml-2 h-6 w-6" />
           </Button>
+          </Link>
         </motion.div>
 
         <ScrollPrompt />
